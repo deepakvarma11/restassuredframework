@@ -9,6 +9,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 
 import Utils.ExcelReader;
+import Utils.PropertyReader;
 
 public class TestBase {
 
@@ -19,12 +20,16 @@ public class TestBase {
 	protected String token;
 
 	protected Apivalidation av;
+	PropertyReader pr;
 
 	
 	public static Logger logs = Logger.getLogger(TestBase.class);
 	
+	
 	@BeforeSuite
 	public void testBeforeSuite() {
+		pr = new PropertyReader();
+		av = new Apivalidation();
 		System.out.println("testBeforeSuite()");
 	}
 
@@ -36,10 +41,13 @@ public class TestBase {
 
 	@BeforeClass
 	public void beforeTest() {
-		baseURI = "https://bookstore.toolsqa.com";
-		av = new Apivalidation();
+		
+		baseURI = pr.getBaseURI();
+		logs.info(baseURI + " is baseURI");
+		userID = pr.getUserId();
+		logs.info(userID + " is userID");
 		read = new ExcelReader(System.getProperty("user.dir") + "/src/test/resources/Suites/Suites.xlsx");
-		userID = "daac1f75-24cc-4e35-aa41-3de75f4baf28";
+		
 		logs.info("Before test completed");
 	}
 

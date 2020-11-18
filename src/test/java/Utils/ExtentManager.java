@@ -9,7 +9,9 @@ import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.ChartLocation;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
-public class ExtentManager {
+import commonlib.TestBase;
+
+public class ExtentManager extends TestBase{
 
 	private static ExtentReports instance;
 	public static final String EXTENT_REPORT_PATH = System.getProperty("user.dir") + "/target/Reports/";
@@ -54,12 +56,15 @@ public class ExtentManager {
 	    	File testDirectory = new File(path);
 	        if (!testDirectory.exists()) {
 	        	if (testDirectory.mkdir()) {
-	                System.out.println("Directory: " + path + " is created!" );
+	        		logs.info("Directory: " + path + " is created!" );
+//	                System.out.println("Directory: " + path + " is created!" );
 	            } else {
-	                System.out.println("Failed to create directory: " + path);
+//	                System.out.println("Failed to create directory: " + path);
+	                logs.info("Failed to create directory: " + path);
 	            }
 	        } else {
-	            System.out.println("Directory already exists: " + path);
+	        	logs.info("Directory already exists: " + path);
+//	            System.out.println("Directory already exists: " + path);
 	        }
 	    }
 
