@@ -1,17 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="Utils.TestListener"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="scripts.GetUser">
+      <class name="scripts.RegisterTestCase">
         <methods>
+          <include name="testBeforeSuite"/>
+          <include name="registered"/>
+          <include name="afterTest"/>
+          <include name="testAfterSuite"/>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- scripts.RegisterTestCase -->
+      <class name="scripts.AuthorizationTestCases">
+        <methods>
+          <include name="testBeforeSuite"/>
+          <include name="authorizationNegative"/>
+          <include name="authorizationPositive"/>
+          <include name="afterTest"/>
+          <include name="testAfterSuite"/>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- scripts.AuthorizationTestCases -->
+      <class name="scripts.TokenGenerationTestCase">
+        <methods>
+          <include name="getTokenNegative"/>
+          <include name="getTokenPositive"/>
           <include name="testBeforeSuite"/>
           <include name="afterTest"/>
           <include name="testAfterSuite"/>
-          <include name="getUser"/>
           <include name="beforeTest"/>
         </methods>
-      </class> <!-- scripts.GetUser -->
+      </class> <!-- scripts.TokenGenerationTestCase -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

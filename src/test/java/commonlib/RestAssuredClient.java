@@ -6,11 +6,18 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 
 public class RestAssuredClient {
-	
+
 	public Response getMethodOneHeader(String headerKey, String headerValue, String endPoint) {
-		
+
 		Response res = given().header(headerKey, headerValue).get(endPoint);
-		
+
+		return res;
+	}
+
+	public Response getMethodNoHeader(String endpoint) {
+
+		Response res = given().get(endpoint);
+
 		return res;
 	}
 
@@ -22,7 +29,7 @@ public class RestAssuredClient {
 	}
 
 	public Response postMethodNoHeaders(String body, String endPoint) {
-		
+
 		Response res = given().contentType("application/json").body(body).when().post(endPoint);
 		return res;
 	}

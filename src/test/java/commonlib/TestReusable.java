@@ -20,13 +20,15 @@ public class TestReusable extends TestBase {
 		Response res = av.postMethod(requestBody, "postMethodNoHeaders", "Token");
 
 		JsonPath responseJson = res.jsonPath();
+		
 		token = responseJson.getString("token");
+		logs.info("Token generated " + token);
 
 		JSONObject reqBody = new JSONObject(read.getCellDataValue("APITestData", "Body", "Authorization"));
 
 		av.postMethod(reqBody, "postMethodNoHeaders", "Authorization");
-
-		System.out.println(token);
+		logs.info("Authorization completed");
+		
 		return token;
 
 	}

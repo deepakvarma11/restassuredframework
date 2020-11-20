@@ -29,7 +29,9 @@ public class TokenGenerationTestCase extends TestBase {
 		Assert.assertTrue(res.asString().contains("token"));
 
 		token = responseJson.getString("token");
-		System.out.println(token);
+//		System.out.println(token);
+		
+		
 
 	}
 	

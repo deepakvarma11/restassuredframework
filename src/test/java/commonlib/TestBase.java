@@ -15,7 +15,6 @@ public class TestBase {
 
 	protected ExcelReader read;
 	protected String locationHeader;
-	protected String baseUri;
 	protected String userID;
 	protected String token;
 
@@ -28,8 +27,7 @@ public class TestBase {
 	
 	@BeforeSuite
 	public void testBeforeSuite() {
-		pr = new PropertyReader();
-		av = new Apivalidation();
+		
 		System.out.println("testBeforeSuite()");
 	}
 
@@ -41,7 +39,8 @@ public class TestBase {
 
 	@BeforeClass
 	public void beforeTest() {
-		
+		pr = new PropertyReader();
+		av = new Apivalidation();
 		baseURI = pr.getBaseURI();
 		logs.info(baseURI + " is baseURI");
 		userID = pr.getUserId();
