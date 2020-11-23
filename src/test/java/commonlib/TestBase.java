@@ -20,33 +20,31 @@ public class TestBase {
 
 	protected Apivalidation av;
 	PropertyReader pr;
+	protected TestReusable tr;
 
-	
 	public static Logger logs = Logger.getLogger(TestBase.class);
-	
-	
+
 	@BeforeSuite
 	public void testBeforeSuite() {
-		
-		System.out.println("testBeforeSuite()");
+		logs.info("test before suite completed");
 	}
 
 	@AfterSuite
 	public void testAfterSuite() {
-		System.out.println("testAfterSuite()");
+		logs.info("test After suite completed");
 	}
-
 
 	@BeforeClass
 	public void beforeTest() {
 		pr = new PropertyReader();
 		av = new Apivalidation();
+		tr = new TestReusable();
 		baseURI = pr.getBaseURI();
 		logs.info(baseURI + " is baseURI");
 		userID = pr.getUserId();
 		logs.info(userID + " is userID");
 		read = new ExcelReader(System.getProperty("user.dir") + "/src/test/resources/Suites/Suites.xlsx");
-		
+
 		logs.info("Before test completed");
 	}
 

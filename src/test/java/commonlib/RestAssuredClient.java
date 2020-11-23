@@ -22,6 +22,8 @@ public class RestAssuredClient {
 	}
 
 	public Response postMethodOneHeader(String headerKey, String headerValue, String body, String endPoint) {
+		
+//		System.out.println("HeaderKey :"+ headerKey + " headerValue :"+ headerValue + " body :" + body + " endpoint " + endPoint);
 
 		Response res = given().header(headerKey, headerValue).contentType("application/json").body(body).when()
 				.post(endPoint);
@@ -31,6 +33,14 @@ public class RestAssuredClient {
 	public Response postMethodNoHeaders(String body, String endPoint) {
 
 		Response res = given().contentType("application/json").body(body).when().post(endPoint);
+		return res;
+	}
+
+	public Response postMethodTwoHeaders(String header1Name, String header1value, String header2Name,
+			String header2Value, String body, String endPoint) {
+
+		Response res = given().header(header1Name, header1value).contentType("application/json").body(body).when()
+				.post(endPoint);
 		return res;
 	}
 }

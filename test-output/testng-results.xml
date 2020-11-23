@@ -1,32 +1,110 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="10" total="18" passed="8">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="4143" started-at="2020-11-21T15:33:32Z" finished-at="2020-11-21T15:33:36Z">
+  <suite name="Suite" duration-ms="18268" started-at="2020-11-23T09:46:10Z" finished-at="2020-11-23T09:46:29Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="4143" started-at="2020-11-21T15:33:32Z" finished-at="2020-11-21T15:33:36Z">
-      <class name="scripts.GetBooks">
-        <test-method status="PASS" signature="testBeforeSuite()[pri:0, instance:scripts.GetBooks@5276e6b0]" name="testBeforeSuite" is-config="true" duration-ms="11" started-at="2020-11-21T15:33:32Z" finished-at="2020-11-21T15:33:32Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testBeforeSuite -->
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:scripts.GetBooks@5276e6b0]" name="beforeTest" is-config="true" duration-ms="1169" started-at="2020-11-21T15:33:32Z" finished-at="2020-11-21T15:33:33Z">
+    <test name="Test" duration-ms="18268" started-at="2020-11-23T09:46:10Z" finished-at="2020-11-23T09:46:29Z">
+      <class name="scripts.RegisterTestCase">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:scripts.RegisterTestCase@5dd6264]" name="beforeTest" is-config="true" duration-ms="36" started-at="2020-11-23T09:46:17Z" finished-at="2020-11-23T09:46:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="getBooks()[pri:0, instance:scripts.GetBooks@5276e6b0]" name="getBooks" duration-ms="2959" started-at="2020-11-21T15:33:33Z" finished-at="2020-11-21T15:33:36Z">
+        <test-method status="PASS" signature="registered()[pri:0, instance:scripts.RegisterTestCase@5dd6264]" name="registered" duration-ms="1580" started-at="2020-11-23T09:46:17Z" finished-at="2020-11-23T09:46:19Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getBooks -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:scripts.GetBooks@5276e6b0]" name="afterTest" is-config="true" duration-ms="0" started-at="2020-11-21T15:33:36Z" finished-at="2020-11-21T15:33:36Z">
+        </test-method> <!-- registered -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:scripts.RegisterTestCase@5dd6264]" name="afterTest" is-config="true" duration-ms="0" started-at="2020-11-23T09:46:19Z" finished-at="2020-11-23T09:46:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-        <test-method status="PASS" signature="testAfterSuite()[pri:0, instance:scripts.GetBooks@5276e6b0]" name="testAfterSuite" is-config="true" duration-ms="0" started-at="2020-11-21T15:33:36Z" finished-at="2020-11-21T15:33:36Z">
+      </class> <!-- scripts.RegisterTestCase -->
+      <class name="scripts.TokenGenerationTestCase">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:scripts.TokenGenerationTestCase@1ffe63b9]" name="beforeTest" is-config="true" duration-ms="22" started-at="2020-11-23T09:46:19Z" finished-at="2020-11-23T09:46:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="getTokenPositive()[pri:0, instance:scripts.TokenGenerationTestCase@1ffe63b9]" name="getTokenPositive" duration-ms="1183" started-at="2020-11-23T09:46:19Z" finished-at="2020-11-23T09:46:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getTokenPositive -->
+        <test-method status="PASS" signature="getTokenNegative()[pri:1, instance:scripts.TokenGenerationTestCase@1ffe63b9]" name="getTokenNegative" duration-ms="1109" started-at="2020-11-23T09:46:25Z" finished-at="2020-11-23T09:46:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getTokenNegative -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:scripts.TokenGenerationTestCase@1ffe63b9]" name="afterTest" is-config="true" duration-ms="1" started-at="2020-11-23T09:46:26Z" finished-at="2020-11-23T09:46:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- scripts.TokenGenerationTestCase -->
+      <class name="scripts.AddBooks">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:scripts.AddBooks@12e61fe6]" name="beforeTest" is-config="true" duration-ms="15" started-at="2020-11-23T09:46:21Z" finished-at="2020-11-23T09:46:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="addBooks()[pri:0, instance:scripts.AddBooks@12e61fe6]" name="addBooks" duration-ms="3779" started-at="2020-11-23T09:46:21Z" finished-at="2020-11-23T09:46:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addBooks -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:scripts.AddBooks@12e61fe6]" name="afterTest" is-config="true" duration-ms="0" started-at="2020-11-23T09:46:25Z" finished-at="2020-11-23T09:46:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- scripts.AddBooks -->
+      <class name="scripts.AuthorizationTestCases">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:scripts.AuthorizationTestCases@51e5fc98]" name="beforeTest" is-config="true" duration-ms="9" started-at="2020-11-23T09:46:26Z" finished-at="2020-11-23T09:46:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="authorizationPositive()[pri:1, instance:scripts.AuthorizationTestCases@51e5fc98]" name="authorizationPositive" duration-ms="1431" started-at="2020-11-23T09:46:26Z" finished-at="2020-11-23T09:46:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- authorizationPositive -->
+        <test-method status="PASS" signature="authorizationNegative()[pri:2, instance:scripts.AuthorizationTestCases@51e5fc98]" name="authorizationNegative" duration-ms="1233" started-at="2020-11-23T09:46:27Z" finished-at="2020-11-23T09:46:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- authorizationNegative -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:scripts.AuthorizationTestCases@51e5fc98]" name="afterTest" is-config="true" duration-ms="0" started-at="2020-11-23T09:46:29Z" finished-at="2020-11-23T09:46:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- scripts.AuthorizationTestCases -->
+      <class name="scripts.GetUser">
+        <test-method status="PASS" signature="testBeforeSuite()[pri:0, instance:scripts.GetUser@78aab498]" name="testBeforeSuite" is-config="true" duration-ms="11" started-at="2020-11-23T09:46:10Z" finished-at="2020-11-23T09:46:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testBeforeSuite -->
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:scripts.GetUser@78aab498]" name="beforeTest" is-config="true" duration-ms="843" started-at="2020-11-23T09:46:10Z" finished-at="2020-11-23T09:46:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="getUser()[pri:0, instance:scripts.GetUser@78aab498]" name="getUser" duration-ms="5616" started-at="2020-11-23T09:46:11Z" finished-at="2020-11-23T09:46:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getUser -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:scripts.GetUser@78aab498]" name="afterTest" is-config="true" duration-ms="0" started-at="2020-11-23T09:46:17Z" finished-at="2020-11-23T09:46:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method status="PASS" signature="testAfterSuite()[pri:0, instance:scripts.GetUser@78aab498]" name="testAfterSuite" is-config="true" duration-ms="0" started-at="2020-11-23T09:46:29Z" finished-at="2020-11-23T09:46:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAfterSuite -->
+      </class> <!-- scripts.GetUser -->
+      <class name="scripts.GetBooks">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:scripts.GetBooks@7c469c48]" name="beforeTest" is-config="true" duration-ms="17" started-at="2020-11-23T09:46:20Z" finished-at="2020-11-23T09:46:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="getBooks()[pri:0, instance:scripts.GetBooks@7c469c48]" name="getBooks" duration-ms="1354" started-at="2020-11-23T09:46:20Z" finished-at="2020-11-23T09:46:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getBooks -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:scripts.GetBooks@7c469c48]" name="afterTest" is-config="true" duration-ms="0" started-at="2020-11-23T09:46:21Z" finished-at="2020-11-23T09:46:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
       </class> <!-- scripts.GetBooks -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->

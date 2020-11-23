@@ -31,11 +31,10 @@ public class Apivalidation extends TestBase {
 		if (Header1Value.equalsIgnoreCase("Bearer")) {
 			String token = tr.getTokenAndAuthorization();
 			BearerHeaderValue = Header1Value + " " + token;
-		}else if(Header2Value.equalsIgnoreCase("Bearer")) {
+		} else if (Header2Value.equalsIgnoreCase("Bearer")) {
 			String token = tr.getTokenAndAuthorization();
 			BearerHeaderValue = Header2Value + " " + token;
 		}
-
 
 		if (method.equalsIgnoreCase("getMethodOneHeader")) {
 			String endPoint = resourceURI + "/" + locationId;
@@ -45,7 +44,7 @@ public class Apivalidation extends TestBase {
 		}
 
 		if (method.equalsIgnoreCase("getMethodNoHeader")) {
-			logs.info("Final Endpnt :"+ resourceURI);
+			logs.info("Final Endpnt :" + resourceURI);
 			res = rc.getMethodNoHeader(resourceURI);
 		}
 
@@ -71,21 +70,27 @@ public class Apivalidation extends TestBase {
 		String Query3Key = read.getCellDataValue("APITestData", "Query3Key", testCase);
 		String Query3Value = read.getCellDataValue("APITestData", "Query3Value", testCase);
 
-
 		String body = requestBody.toString();
-		
-		
+
 		String BearerHeaderValue = null;
 		if (Header1Value.equalsIgnoreCase("Bearer")) {
+			logs.info("Bearer token got generated ");
 			String token = tr.getTokenAndAuthorization();
 			BearerHeaderValue = Header1Value + " " + token;
-		}else if(Header2Value.equalsIgnoreCase("Bearer")) {
+			logs.info("Bearer value :" + BearerHeaderValue);
+		} else if (Header2Value.equalsIgnoreCase("Bearer")) {
+			logs.info("Bearer token got generated ");
 			String token = tr.getTokenAndAuthorization();
 			BearerHeaderValue = Header2Value + " " + token;
+			logs.info("Bearer value :" + BearerHeaderValue);
 		}
 
 		if (postMethod.equalsIgnoreCase("postMethodNoHeaders")) {
 			res = rc.postMethodNoHeaders(body, resourceURI);
+		}
+
+		if (postMethod.equalsIgnoreCase("postMethodOneHeader")) {
+			res = rc.postMethodOneHeader(Header1Name, BearerHeaderValue, body, resourceURI);
 		}
 
 		return res;

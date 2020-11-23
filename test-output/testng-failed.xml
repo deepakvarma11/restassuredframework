@@ -3,15 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="scripts.GetBooks">
+      <class name="scripts.AddBooks">
         <methods>
+          <include name="addBookExists"/>
           <include name="testBeforeSuite"/>
           <include name="afterTest"/>
           <include name="testAfterSuite"/>
-          <include name="getBooks"/>
           <include name="beforeTest"/>
         </methods>
-      </class> <!-- scripts.GetBooks -->
+      </class> <!-- scripts.AddBooks -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

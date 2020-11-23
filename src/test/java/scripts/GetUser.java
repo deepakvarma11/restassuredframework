@@ -17,7 +17,7 @@ public class GetUser extends TestBase {
 
 		Response res = av.getMethod(userID, "getMethodOneHeader", "GetUser");
 
-		System.out.println(res.prettyPrint());
+//		System.out.println(res.prettyPrint());
 
 		Assert.assertEquals(HttpStatus.SC_OK, res.getStatusCode());
 
@@ -30,9 +30,10 @@ public class GetUser extends TestBase {
 		if (statusCode == res.getStatusCode()) {
 			ExtentTestManager.getTest().log(Status.PASS, methodName + " Positive Scenario Passed Expected Status "
 					+ statusCode + " and Actual Status : " + res.getStatusCode());
-		}else {
-			ExtentTestManager.getTest().log(Status.FAIL, methodName + " Positive Scenario Failed Expected Status "
-					+ statusCode + " and Actual Status : " + res.getStatusCode() + " and the Response is : <br />" + res.prettyPrint() +"<br />");
+		} else {
+			ExtentTestManager.getTest().log(Status.FAIL,
+					methodName + " Positive Scenario Failed Expected Status " + statusCode + " and Actual Status : "
+							+ res.getStatusCode() + " and the Response is : <br />" + res.prettyPrint() + "<br />");
 		}
 	}
 
