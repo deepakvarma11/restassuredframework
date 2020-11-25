@@ -8,6 +8,7 @@ import com.aventstack.extentreports.Status;
 
 import Utils.ExtentTestManager;
 import commonlib.TestBase;
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 
 public class DeleteBook extends TestBase {
@@ -29,7 +30,12 @@ public class DeleteBook extends TestBase {
 
 		int alreadyDeletedStatusCode = HttpStatus.SC_BAD_REQUEST;
 
-		JSONObject json = new JSONObject(res.asString());
+//		JSONObject json = new JSONObject(res.asString());
+
+		String body = res.asString();
+
+		
+		
 
 		if (statusCode == res.getStatusCode()) {
 
@@ -37,9 +43,9 @@ public class DeleteBook extends TestBase {
 					methodName + " : Book successfully deleted and Expected statusCode is :" + statusCode
 							+ " and Actual is " + res.statusCode());
 		} else if (alreadyDeletedStatusCode == res.getStatusCode()) {
-
-			ExtentTestManager.getTest().log(Status.INFO, methodName + " : " + json.getString("message")
-					+ " The book is not available or already Deleted by user ");
+			String message = JsonPath.from(body).get("message");
+			ExtentTestManager.getTest().log(Status.INFO, methodName + " : " + /* json.getString("message") */"message "
+					+ message + " The book is not available or already Deleted by user ");
 		} else {
 
 			ExtentTestManager.getTest().log(Status.FAIL, methodName + " : " + "Failed " + res.asString());

@@ -6,15 +6,15 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="scripts.AddBooks">
+      <class name="scripts.DeleteBook">
         <methods>
-          <include name="addBooks"/>
           <include name="testBeforeSuite"/>
+          <include name="deleteBook"/>
           <include name="afterTest"/>
           <include name="testAfterSuite"/>
           <include name="beforeTest"/>
         </methods>
-      </class> <!-- scripts.AddBooks -->
+      </class> <!-- scripts.DeleteBook -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

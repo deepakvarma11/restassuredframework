@@ -1,0 +1,17 @@
+Utils\PropertyReader.class
+scripts\AddBooks.class
+commonlib\RestAssuredClient.class
+scripts\GetBooks.class
+scripts\RegisterTestCase.class
+scripts\AuthorizationTestCases.class
+commonlib\Apivalidation.class
+scripts\TokenGenerationTestCase.class
+commonlib\TestReusable.class
+Utils\TestListener.class
+commonlib\TestBase.class
+Utils\ExtentManager.class
+scripts\GetUser.class
+scripts\DeleteBook.class
+Utils\ExtentTestManager.class
+Utils\ExcelReader.class
+Utils\Logs.class

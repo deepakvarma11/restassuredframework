@@ -8,12 +8,12 @@
 
 	<test name="Test">
 		<classes>
-			<!-- <class name="scripts.GetUser"></class>
+			<class name="scripts.GetUser"></class>
 			<class name="scripts.RegisterTestCase"></class>
 			<class name="scripts.TokenGenerationTestCase"></class>
 			<class name="scripts.AuthorizationTestCases"></class>
-			<class name="scripts.GetBooks"></class> -->
-			<!-- <class name="scripts.AddBooks"></class> -->
+			<class name="scripts.GetBooks"></class>
+		 	<class name="scripts.AddBooks"></class> 
 			<class name="scripts.DeleteBook"></class>
 		</classes>
 	</test> <!-- Test -->
