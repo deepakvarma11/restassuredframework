@@ -6,35 +6,15 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="scripts.RegisterTestCase">
+      <class name="scripts.AddBooks">
         <methods>
-          <include name="testBeforeSuite"/>
-          <include name="registered"/>
-          <include name="afterTest"/>
-          <include name="testAfterSuite"/>
-          <include name="beforeTest"/>
-        </methods>
-      </class> <!-- scripts.RegisterTestCase -->
-      <class name="scripts.AuthorizationTestCases">
-        <methods>
-          <include name="testBeforeSuite"/>
-          <include name="authorizationNegative"/>
-          <include name="authorizationPositive"/>
-          <include name="afterTest"/>
-          <include name="testAfterSuite"/>
-          <include name="beforeTest"/>
-        </methods>
-      </class> <!-- scripts.AuthorizationTestCases -->
-      <class name="scripts.TokenGenerationTestCase">
-        <methods>
-          <include name="getTokenNegative"/>
-          <include name="getTokenPositive"/>
+          <include name="addBooks"/>
           <include name="testBeforeSuite"/>
           <include name="afterTest"/>
           <include name="testAfterSuite"/>
           <include name="beforeTest"/>
         </methods>
-      </class> <!-- scripts.TokenGenerationTestCase -->
+      </class> <!-- scripts.AddBooks -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

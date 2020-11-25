@@ -26,12 +26,12 @@ public class TestBase {
 
 	@BeforeSuite
 	public void testBeforeSuite() {
-		logs.info("test before suite completed");
+		logs.info("test before suite Started");
 	}
 
 	@AfterSuite
 	public void testAfterSuite() {
-		logs.info("test After suite completed");
+		logs.info("test After suite started");
 	}
 
 	@BeforeClass

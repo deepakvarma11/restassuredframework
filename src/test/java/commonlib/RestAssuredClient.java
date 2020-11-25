@@ -22,8 +22,6 @@ public class RestAssuredClient {
 	}
 
 	public Response postMethodOneHeader(String headerKey, String headerValue, String body, String endPoint) {
-		
-//		System.out.println("HeaderKey :"+ headerKey + " headerValue :"+ headerValue + " body :" + body + " endpoint " + endPoint);
 
 		Response res = given().header(headerKey, headerValue).contentType("application/json").body(body).when()
 				.post(endPoint);
@@ -41,6 +39,16 @@ public class RestAssuredClient {
 
 		Response res = given().header(header1Name, header1value).contentType("application/json").body(body).when()
 				.post(endPoint);
+		return res;
+	}
+
+	public Response deleteMethodOneHeaderBody(String headerkey, String headerValue, String body, String endPoint) {
+
+//		System.out.println("Header Key " + headerkey + " HeaderValue " + headerValue + " body " + body + " Endpoint "+ endPoint);
+
+		Response res = given().header(headerkey, headerValue).contentType("application/json").body(body).when()
+				.delete(endPoint);
+
 		return res;
 	}
 }
