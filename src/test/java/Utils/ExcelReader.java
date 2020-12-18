@@ -5,7 +5,7 @@ import java.io.FileOutputStream;
 
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
-import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+//import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
@@ -43,7 +43,7 @@ public class ExcelReader {
 			if (fileExtension.equalsIgnoreCase(".xlsx")) {
 				workbook = new XSSFWorkbook(fin);
 			} else {
-				workbook = new HSSFWorkbook(fin);
+//				workbook = new HSSFWorkbook(fin);
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
