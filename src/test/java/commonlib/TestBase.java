@@ -46,7 +46,7 @@ public class TestBase {
 		userID = pr.getUserId();
 		logs.info(userID + " is userID");
 //		read = new ExcelReader(System.getProperty("user.dir") + "/src/test/resources/Suites/Suites.xlsx");
-		read = new ExcelReader("C:\Users\M1049027\eclipse-workspace\restassuredframework\src\test\resources\Suites\Suites.xlsx");
+		read = new ExcelReader("C:/Users/M1049027/eclipse-workspace/restassuredframework/src/test/resources/Suites/Suites.xlsx");
 		logs.info("Before test completed");
 	}
 
